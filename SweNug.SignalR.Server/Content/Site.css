@@ -10,6 +10,9 @@
 input.findGame {
     clear: both;
 }
+.clear {
+    clear: both;
+}
 span.box {
     display: block;
     border: 2px solid pink;
@@ -23,7 +26,7 @@ div.information {
 }
 div#serverInformation {
     clear: both;
-    margin-top: 100px;
+    margin-top: 30px;
     font-size: 80%;
     font-style: italic;
 }

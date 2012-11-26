@@ -9,7 +9,6 @@ namespace SweNug.SignalR.Server
     public class Game : Hub
     {
         private static object _syncRoot = new object();
-        private int _connectedClients = 0;
         private int _gamesPlayed = 0;
         /// <summary>
         /// The list of clients is used to keep track of registered clients and clients that are looking for games
@@ -33,10 +32,6 @@ namespace SweNug.SignalR.Server
         /// <returns>If the operation takes long, run it asynchronously and return the task in which it runs</returns>
         public override Task OnDisconnected()
         {
-            lock (_syncRoot)
-            {
-                _connectedClients -= 1;
-            }
             var game = games.FirstOrDefault(x => x.Player1.ConnectionId == Context.ConnectionId || x.Player2.ConnectionId == Context.ConnectionId);
             if (game == null)
             {
@@ -76,7 +71,7 @@ namespace SweNug.SignalR.Server
 
         public Task SendStatsUpdate()
         {
-            return Clients.All.refreshAmountOfPlayers(new { totalGamesPlayed = _gamesPlayed, amountOfGames = games.Count, amountOfClients = _connectedClients});
+            return Clients.All.refreshAmountOfPlayers(new { totalGamesPlayed = _gamesPlayed, amountOfGames = games.Count, amountOfClients = clients.Count});
         }
         /// <summary>
         /// registering a new client will add the client to the current list of clients and save the connection id which will be used to communicate with the client
@@ -86,8 +81,14 @@ namespace SweNug.SignalR.Server
         {
             lock (_syncRoot)
             {
-                _connectedClients += 1;
-                clients.Add(new Client { ConnectionId = Context.ConnectionId, IsPlaying = false, Name = data });
+                var client = clients.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
+                if (client == null)
+                {
+                    client = new Client { ConnectionId = Context.ConnectionId, Name = data };
+                    clients.Add(client);
+                }
+
+                client.IsPlaying = false;
             }
 
             SendStatsUpdate();
@@ -158,20 +159,21 @@ namespace SweNug.SignalR.Server
         {
             var player = clients.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
             if (player == null) return;
-
             player.LookingForOpponent = true;
 
             // Look for a random opponent if there's more than one looking for a game
-            var opponent  = clients.Where(x => x.ConnectionId != Context.ConnectionId && x.LookingForOpponent).OrderBy(x => Guid.NewGuid()).FirstOrDefault();
+            var opponent = clients.Where(x => x.ConnectionId != Context.ConnectionId && x.LookingForOpponent && !x.IsPlaying).OrderBy(x => Guid.NewGuid()).FirstOrDefault();
             if (opponent == null)
             {
                 Clients.Client(Context.ConnectionId).noOpponents(); 
                 return;
             }
 
-            // Remove the player and the opponent from the client list
-            clients.Remove(player);
-            clients.Remove(opponent);
+            // Set both players as busy
+            player.IsPlaying = true;
+            player.LookingForOpponent = false;
+            opponent.IsPlaying = true;
+            opponent.LookingForOpponent = false;
 
             player.Opponent = opponent;
             opponent.Opponent = player;
