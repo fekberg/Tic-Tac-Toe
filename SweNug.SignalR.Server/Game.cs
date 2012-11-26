@@ -9,7 +9,7 @@ namespace SweNug.SignalR.Server
     public class Game : Hub
     {
         private static object _syncRoot = new object();
-        private int _gamesPlayed = 0;
+        private static int _gamesPlayed = 0;
         /// <summary>
         /// The list of clients is used to keep track of registered clients and clients that are looking for games
         /// The client will be removed from this list as soon as the client is in a game or has left the game
