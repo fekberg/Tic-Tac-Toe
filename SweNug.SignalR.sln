@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweNug.SignalR", "SweNug.SignalR\SweNug.SignalR.csproj", "{964EA00D-46A0-480C-A492-C84B5E0AA7A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweNug.SignalR.Server", "SweNug.SignalR.Server\SweNug.SignalR.Server.csproj", "{964EA00D-46A0-480C-A492-C84B5E0AA7A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweNug.SignalR.Tests", "SweNug.SignalR.Tests\SweNug.SignalR.Tests.csproj", "{7EDC30A6-DBE8-4AAB-9FA5-6AFC787CE8DD}"
 EndProject

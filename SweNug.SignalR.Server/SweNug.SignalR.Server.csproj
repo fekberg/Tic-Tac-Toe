@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SweNug.SignalR</RootNamespace>
-    <AssemblyName>SweNug.SignalR</AssemblyName>
+    <RootNamespace>SweNug.SignalR.Server</RootNamespace>
+    <AssemblyName>SweNug.SignalR.Server</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -75,7 +75,6 @@
     <Content Include="Content\Images\TicTacToeO.png" />
     <Content Include="Content\Images\TicTacToeX.png" />
     <Content Include="Content\Site.css" />
-    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\tictactoe2012 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\tictactoe2012 - Web Deploy.pubxml" />
@@ -91,9 +90,6 @@
     <Compile Include="Client.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameInformation.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TicTacToe.cs" />
   </ItemGroup>

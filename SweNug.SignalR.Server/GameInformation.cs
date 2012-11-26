@@ -1,4 +1,4 @@
-namespace SweNug.SignalR
+namespace SweNug.SignalR.Server
 {
     public class GameInformation
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace SweNug.SignalR
+namespace SweNug.SignalR.Server
 {
     public class Client
     {

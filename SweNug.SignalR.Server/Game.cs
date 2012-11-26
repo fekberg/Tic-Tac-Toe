@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SweNug.SignalR
+namespace SweNug.SignalR.Server
 {
-    [HubName("Game")]
     public class Game : Hub
     {
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SweNug.SignalR;
+using SweNug.SignalR.Server;
 
 namespace SweNug.SignalR.Tests
 {

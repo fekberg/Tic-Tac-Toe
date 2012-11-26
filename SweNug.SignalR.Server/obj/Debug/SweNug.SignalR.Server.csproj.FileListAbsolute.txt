@@ -1,0 +1,12 @@
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\SweNug.SignalR.Server.dll
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\SweNug.SignalR.Server.pdb
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Core.dll
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.AspNet.dll
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.Common.dll
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Newtonsoft.Json.dll
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Core.xml
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.AspNet.xml
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.Common.xml
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\bin\Newtonsoft.Json.xml
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\obj\Debug\SweNug.SignalR.Server.dll
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR\obj\Debug\SweNug.SignalR.Server.pdb

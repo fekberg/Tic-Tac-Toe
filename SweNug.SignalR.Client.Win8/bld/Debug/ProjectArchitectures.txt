@@ -1,0 +1,1 @@
+X:\Filip\Work\Programming\Projects\Tic-Tac-Toe\SweNug.SignalR.Client.Win8\SweNug.SignalR.Client.Win8.jsproj;neutral
