@@ -71,10 +71,6 @@ namespace SweNug.SignalR.Server
 
         public override Task OnConnected()
         {
-            lock(_syncRoot)
-            {
-                _connectedClients += 1;
-            }
             return SendStatsUpdate();
         }
 
@@ -90,6 +86,7 @@ namespace SweNug.SignalR.Server
         {
             lock (_syncRoot)
             {
+                _connectedClients += 1;
                 clients.Add(new Client { ConnectionId = Context.ConnectionId, IsPlaying = false, Name = data });
             }
 
