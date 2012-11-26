@@ -27,8 +27,8 @@
             <article>
                 <div>
                     <header>
-                        <h2 class="title">Register to play Tic tac toe</h2>
-                        <h4 class="subtitle gameInformation">Just fill in your nickname and get ready!</h4>
+                        <h2 id="gameInformation" class="title">Register to play Tic tac toe</h2>
+                        <h4 id="information" class="subtitle">Just fill in your nickname and get ready!</h4>
                     </header>
                     <div class="item-content">
                         <div id="register">
@@ -38,8 +38,6 @@
                             <input type="button" class="button" id="registerName" value="Register to play Tic-Tac-Toe!" />
                         </div>
                         <div id="findOpponent">
-                            <strong>Find someone to play a game with!</strong>
-                            <em>You're just a small way from beating your first opponent!</em><br />
                             <input type="button" class="button findGame" id="findGame" value="Find Opponent!" />
                         </div>
                         <div id="waitingForOpponent">We're searching for an opponent, please wait!</div>
@@ -88,13 +86,14 @@
                 $('#debug').append('<li>You\'re up, make your move!</li>');
             });
             game.on('foundOpponent', function (message) {
+                $("#game").html("");
                 $("#gameInformation").html("You're playing against " + message);
                 $("#findAnotherGame").hide();
                 $("#waitingForOpponent").hide();
                 $(".subtitle").html('You\'re playing against ' + message);
                 $('#debug').append('<li>You\'re playing against ' + message + '</li>');
 
-                $("#game").html('<div id="information" /><br/>');
+                // $("#game").html('<div id="information" /><br/>');
                 for (var i = 0; i < 9; i++) {
 
                     $("#game").append("<span id=" + i + " class='box' />");
@@ -132,6 +131,8 @@
                 $("#game").hide();
             });
             game.on('registerComplete', function (message) {
+                $("#gameInformation").html("Find someone to play a game with!");
+                $("#information").html("You're just a small way from beating your first opponent!");
                 $('#debug').append('<li>You\'re now ready to play a game of Tic-Tac-Toe!</li>');
             });
             game.on('gameOver', function (message) {
