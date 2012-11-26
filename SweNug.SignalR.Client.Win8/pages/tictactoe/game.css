@@ -68,6 +68,16 @@ div#game {
 .clear {
     clear: both;
 }
+div#serverInformation {
+    clear: both;
+    margin-top: 100px;
+    font-size: 80%;
+    font-style: italic;
+}
+span#gameInformation {
+    font-weight: bold;
+    font-size: 120%;
+}
 
 @media screen and (-ms-view-state: snapped) {
     .itemdetailpage .content {

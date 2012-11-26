@@ -42,6 +42,7 @@
             game.client.foundOpponent = function (message) {
                 $("#findAnotherGame").hide();
                 $("#waitingForOpponent").hide();
+                $("#gameInformation").html("You're playing against " + message);
                 $('#debug').append('<li>You\'re playing against ' + message + '</li>');
 
                 $("#game").html('<div id="information" /><br/>');
@@ -70,7 +71,7 @@
                 $('#debug').append('<li>Marker was placed by ' + message.OpponentName + ' at position ' + message.MarkerPosition + '</li>');
             };
             game.client.opponentDisconnected = function (message) {
-                $("#information").html("<strong>Game over! Your opponent left and you won on walk over</strong>");
+                $("#gameInformation").html("<strong>Game over! " + message + " left and you won on walk over</strong>");
                 $('#debug').append('<li>Your opponent left! Congratulations you won!</li>');
 
                 $("#findAnotherGame").show();
@@ -80,11 +81,15 @@
                 $('#debug').append('<li>You\'re now ready to play a game of Tic-Tac-Toe!</li>');
             };
             game.client.gameOver = function (message) {
+                $("#gameInformation").html("You're playing against " + message);
                 $("#information").html('<strong>Game is over and We have a Winner!! The winner is: ' + message + '</strong>');
                 $('#debug').append('<li>Game is over and We have a Winner!! Congratulations ' + message + '</li>');
                 $("#findAnotherGame").show();
             }
-
+            game.client.refreshAmountOfPlayers = function (message) {
+                $("#amountOfGames").html(message.amountOfGames);
+                $("#amountOfClients").html(message.amountOfClients);
+            };
             $(".box").live("click", function (event) {
                 if ($(this).hasClass("marked")) return;
 
@@ -102,13 +107,13 @@
                 findGame();
             });
             $("#findAnotherGame").click(function () {
+                $("#gameInformation").html("");
                 $("#game").hide();
                 $("#findAnotherGame").hide();
                 game.server.registerClient($('#gamaName').val());
 
                 findGame();
             });
-
             function findGame() {
                 game.server.findOpponent();
                 $("#waitingForOpponent").show();
@@ -121,6 +126,7 @@
         });
     </script>
     <h1><span>Tic Tac Toe</span></h1>
+    <span id="gameInformation"></span>
     <div>
         <div id="register">
             <strong>Your name:</strong>
@@ -142,6 +148,10 @@
             <ul id="debug">
             </ul>
         </fieldset>
+    </div>
+    <div id="serverInformation">
+        Amount of players connected:  <span id="amountOfClients">0</span><br />
+        Amount of games currently played: <span id="amountOfGames">0</span><br />
     </div>
 </body>
 </html>

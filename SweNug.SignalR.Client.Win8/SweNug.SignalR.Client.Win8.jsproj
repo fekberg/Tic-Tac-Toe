@@ -67,7 +67,7 @@
     <Content Include="js\navigator.js" />
     <Content Include="pages\tictactoe\game.css" />
     <Content Include="default.html" />
-    <Content Include="pages\tictactoe\register.html" />
+    <Content Include="pages\tictactoe\game.html" />
     <None Include="SweNug.SignalR.Client.Win8_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

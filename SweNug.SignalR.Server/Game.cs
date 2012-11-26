@@ -32,24 +32,41 @@ namespace SweNug.SignalR.Server
         public override Task OnDisconnected()
         {
             var game = games.FirstOrDefault(x => x.Player1.ConnectionId == Context.ConnectionId || x.Player2.ConnectionId == Context.ConnectionId);
+            if (game == null)
+            {
+                // Client without game?
+                var clientWithoutGame = clients.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
+                if (clientWithoutGame != null)
+                {
+                    clients.Remove(clientWithoutGame);
+
+                    Clients.All.refreshAmountOfPlayers(new { amountOfGames = games.Count, amountOfClients = clients.Count + games.Count * 2 });
+                }
+                return null;
+            }
 
             if (game != null)
             {
                 games.Remove(game);
             }
 
-            var client = clients.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
+            var client = game.Player1.ConnectionId == Context.ConnectionId ? game.Player1 : game.Player2;
 
             if (client == null) return null;
 
             clients.Remove(client);
             if (client.Opponent != null)
             {
+                Clients.All.refreshAmountOfPlayers(new { amountOfGames = games.Count, amountOfClients = clients.Count + games.Count * 2 });
                 return Clients.Client(client.Opponent.ConnectionId).opponentDisconnected(client.Name);
             }
             return null;
         }
 
+        public override Task OnConnected()
+        {
+            return Clients.All.refreshAmountOfPlayers(new { amountOfGames = games.Count, amountOfClients = clients.Count + games.Count * 2 });
+        }
         /// <summary>
         /// registering a new client will add the client to the current list of clients and save the connection id which will be used to communicate with the client
         /// </summary>
@@ -60,6 +77,8 @@ namespace SweNug.SignalR.Server
             {
                 clients.Add(new Client { ConnectionId = Context.ConnectionId, IsPlaying = false, Name = data });
             }
+
+            Clients.All.refreshAmountOfPlayers(new { amountOfGames = games.Count, amountOfClients = clients.Count + games.Count * 2 });
             Clients.Client(Context.ConnectionId).registerComplete();
         }
 
@@ -113,6 +132,8 @@ namespace SweNug.SignalR.Server
 
                 Clients.Client(player.Opponent.ConnectionId).waitingForMarkerPlacement(player.Name);
             }
+
+            Clients.All.refreshAmountOfPlayers(new { amountOfGames = games.Count, amountOfClients = clients.Count + games.Count * 2 });
         }
 
         /// <summary>
@@ -122,6 +143,8 @@ namespace SweNug.SignalR.Server
         public void FindOpponent()
         {
             var player = clients.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
+            if (player == null) return;
+
             player.LookingForOpponent = true;
 
             // Look for a random opponent if there's more than one looking for a game
@@ -165,6 +188,8 @@ namespace SweNug.SignalR.Server
             {
                 games.Add(new TicTacToe { Player1 = player, Player2 = opponent });
             }
+
+            Clients.All.refreshAmountOfPlayers(new { amountOfGames = games.Count, amountOfClients = clients.Count + games.Count * 2 });
         }
     }
 }
