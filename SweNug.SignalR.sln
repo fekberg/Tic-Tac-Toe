@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweNug.SignalR.Tests", "Swe
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "SweNug.SignalR.Client.Win8", "SweNug.SignalR.Client.Win8\SweNug.SignalR.Client.Win8.jsproj", "{93FB3B08-F7CF-42EE-82F5-30FF53DE4CB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E0109BC3-6D83-48A1-8208-9C8FE53AAA14}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
