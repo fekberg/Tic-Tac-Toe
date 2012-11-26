@@ -1,0 +1,13 @@
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bin\x86\Debug\resources.pri
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bin\x86\Debug\AppxManifest.xml
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bin\x86\Debug\SweNug.SignalR.Client.Win8.build.appxrecipe
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\priconfig.xml.intermediate
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\layout.resfiles.intermediate
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\resources.resfiles.intermediate
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\pri.resfiles.intermediate
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\priconfig.xml
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\layout.resfiles
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\resources.resfiles
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\pri.resfiles
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\LanguageQualifiers.txt
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\bld\x86\Debug\ProjectArchitectures.txt

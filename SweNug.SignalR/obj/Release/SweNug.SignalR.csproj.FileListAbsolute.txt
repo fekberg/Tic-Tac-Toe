@@ -1,0 +1,13 @@
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\SweNug.SignalR.dll
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\SweNug.SignalR.pdb
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.AspNet.dll
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.Common.dll
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Newtonsoft.Json.dll
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.AspNet.xml
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Microsoft.AspNet.SignalR.Hosting.Common.xml
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\bin\Newtonsoft.Json.xml
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\obj\Release\SweNug.SignalR.dll
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\obj\Release\SweNug.SignalR.pdb
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR\obj\Release\SweNug.SignalR.csprojResolveAssemblyReference.cache

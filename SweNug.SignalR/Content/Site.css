@@ -1,0 +1,79 @@
+﻿h1 {
+    display: block;
+    background: url('/Content/Images/TicTacToeLogo.png') no-repeat;
+    height: 166px;
+    width: 300px;
+}
+    h1 span {
+        display: none;
+    }
+span.box {
+    display: block;
+    border: 2px solid pink;
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin: 5px;
+}
+div.information {
+    clear: both;
+}
+span.mark1 {
+    background: url('/Content/Images/TicTacToeX.png') center center no-repeat;
+}
+
+span.mark2 {
+    background: url('/Content/Images/TicTacToeO.png') center center no-repeat;
+}
+
+div#game {
+    width: 320px;
+}
+fieldset {
+    margin-top: 100px;
+    display: none;
+}
+.input { 
+   border:none; 
+   -webkit-border-radius:5px; 
+   -moz-border-radius:5px; 
+   border-radius:5px; 
+   -webkit-box-shadow:0 0 5px #666 inset; 
+   -moz-box-shadow:0 0 5px #666 inset; 
+   box-shadow:0 0 5px #666 inset; 
+   height:25px; 
+   line-height:25px; 
+   width:150px; 
+   text-indent:5px; 
+} 
+.input:focus { outline:none; }
+.button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#ff2819 0%,
+		#ab0000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff2819),
+		to(#ab0000));
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	border: 1px solid #7d0000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0.7);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}

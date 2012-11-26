@@ -1,0 +1,1 @@
+C:\Users\Filip\documents\visual studio 2012\Projects\SweNug.SignalR\SweNug.SignalR.Client.Win8\SweNug.SignalR.Client.Win8.jsproj;x86
