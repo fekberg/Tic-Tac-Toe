@@ -13,8 +13,8 @@
 </head>
 <body>
     <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
-    <script src="http://tictactoe2012.azurewebsites.net/Scripts/jquery.signalR-1.0.0-alpha2.min.js" type="text/javascript"></script>
-    <script src="http://tictactoe2012.azurewebsites.net/signalr/hubs" type="text/javascript"></script>
+    <script src="/Scripts/jquery.signalR-1.0.0-alpha2.min.js" type="text/javascript"></script>
+    <script src="/signalr/hubs" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             // Pre-load resources
@@ -29,7 +29,7 @@
             $("#game").hide();
             $("#findAnotherGame").hide();
 
-            var game = $.connection.Game;
+            var game = $.connection.game;
 
             game.client.waitingForOpponent = function (message) { 
                 $("#information").html("<strong>Waiting for the opponent to make a move!</strong>");
