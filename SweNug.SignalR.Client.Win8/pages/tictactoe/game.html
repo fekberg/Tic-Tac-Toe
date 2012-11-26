@@ -72,9 +72,8 @@
 
             var connection = $.hubConnection('http://tictactoe2012.azurewebsites.net/');
             connection.start();
-            var game = connection.createHubProxy("Game");
+            var game = connection.createHubProxy("game");
 
-            
             game.on('waitingForOpponent', function (message) {
                 $(".subtitle").html('You\'ll soon be owning someone!');
                 $("#information").html("<strong>Waiting for the opponent to make a move!</strong>");
@@ -136,7 +135,6 @@
                 $('#debug').append('<li>Game is over and We have a Winner!! Congratulations ' + message + '</li>');
                 $("#findAnotherGame").show();
             });
-
             $(".box").live("click", function (event) {
                 if ($(this).hasClass("marked")) return;
 
@@ -161,7 +159,6 @@
 
                 findGame();
             });
-
             function findGame() {
                 game.invoke('findOpponent');
                 $("#waitingForOpponent").show();

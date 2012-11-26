@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="93fb3b08-f7cf-42ee-82f5-30ff53de4cb5" Version="1.0.0.0" Publisher="CN=Filip" />
+  <Identity Name="93fb3b08-f7cf-42ee-82f5-30ff53de4cb5" Version="2.0.0.0" Publisher="CN=Filip" />
   <Properties>
     <DisplayName>SweNug.SignalR.Client.Win8</DisplayName>
     <PublisherDisplayName>Filip</PublisherDisplayName>
@@ -15,9 +15,15 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="TicTacToe" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="TicTacToe" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="Tic-Tac-Toe" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="A multiplayer Tic-Tac-Toe game that uses SignalR." ForegroundText="light" BackgroundColor="#FFFFFF">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="images\splashscreen.png" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#FFFFFF" />
+        <InitialRotationPreference>
+          <Rotation Preference="portrait" />
+          <Rotation Preference="landscape" />
+          <Rotation Preference="portraitFlipped" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
       </VisualElements>
     </Application>
   </Applications>
