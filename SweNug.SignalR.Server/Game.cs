@@ -8,6 +8,7 @@ namespace SweNug.SignalR.Server
 {
     public class Game : Hub
     {
+        private static object _syncRoot = new object();
         /// <summary>
         /// The list of clients is used to keep track of registered clients and clients that are looking for games
         /// The client will be removed from this list as soon as the client is in a game or has left the game
@@ -55,8 +56,10 @@ namespace SweNug.SignalR.Server
         /// <param name="data">The player name</param>
         public void RegisterClient(string data)
         {
-            clients.Add(new Client { ConnectionId = Context.ConnectionId, IsPlaying = false, Name = data });
-
+            lock (_syncRoot)
+            {
+                clients.Add(new Client { ConnectionId = Context.ConnectionId, IsPlaying = false, Name = data });
+            }
             Clients.Client(Context.ConnectionId).registerComplete();
         }
 
@@ -158,7 +161,10 @@ namespace SweNug.SignalR.Server
                 Clients.Client(player.ConnectionId).waitingForOpponent(opponent.Name);
             }
 
-            games.Add(new TicTacToe{ Player1 = player, Player2 = opponent });
+            lock (_syncRoot)
+            {
+                games.Add(new TicTacToe { Player1 = player, Player2 = opponent });
+            }
         }
     }
 }
