@@ -49,6 +49,10 @@
                             <div id="serverInformation">
                             Amount of players connected:  <span id="amountOfClients">0</span><br />
                             Amount of games currently played: <span id="amountOfGames">0</span><br />
+                            Total amount of games played: <span id="totalAmountOfGames">0</span><br />
+                            <br />
+                            <br />
+                            <a href="https://github.com/fekberg/Tic-Tac-Toe">Source code available on Github</a>
                         </div>
                     </div>
                 </div>
@@ -118,6 +122,7 @@
             game.on('refreshAmountOfPlayers', function (message) {
                 $("#amountOfGames").html(message.amountOfGames);
                 $("#amountOfClients").html(message.amountOfClients);
+                $("#totalAmountOfGames").html(message.totalGamesPlayed);
             });
             game.on('opponentDisconnected', function (message) {
                 $("#gameInformation").html("<strong>Game over! " + message + " left and you won on walk over</strong>");

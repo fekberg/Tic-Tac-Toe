@@ -89,6 +89,7 @@
             game.client.refreshAmountOfPlayers = function (message) {
                 $("#amountOfGames").html(message.amountOfGames);
                 $("#amountOfClients").html(message.amountOfClients);
+                $("#totalAmountOfGames").html(message.totalGamesPlayed);
             };
             $(".box").live("click", function (event) {
                 if ($(this).hasClass("marked")) return;
@@ -151,7 +152,11 @@
     </div>
     <div id="serverInformation">
         Amount of players connected:  <span id="amountOfClients">0</span><br />
-        Amount of games currently played: <span id="amountOfGames">0</span><br />
+        Amount of games currently being played: <span id="amountOfGames">0</span><br />
+        Total amount of games played: <span id="totalAmountOfGames">0</span><br />
+        <br />
+        <br />
+        <a href="https://github.com/fekberg/Tic-Tac-Toe">Source code available on Github</a>
     </div>
 </body>
 </html>
