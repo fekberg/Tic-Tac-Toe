@@ -13,7 +13,7 @@
 </head>
 <body>
     <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
-    <script src="/Scripts/jquery.signalR-1.0.0-alpha2.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.signalR-1.0.1.min.js"></script>
     <script src="/signalr/hubs" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
@@ -123,7 +123,7 @@
             }
 
             // Start the connection
-            $.connection.hub.start({ transport: 'longPolling' });
+            $.connection.hub.start().done();
         });
     </script>
     <h1><span>Tic Tac Toe</span></h1>
