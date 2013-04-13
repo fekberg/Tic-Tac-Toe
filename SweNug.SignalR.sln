@@ -9,7 +9,9 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "SweNug.SignalR.Client.Win8"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E0109BC3-6D83-48A1-8208-9C8FE53AAA14}"
 	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
 Global
