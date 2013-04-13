@@ -10,7 +10,7 @@ There's a Windows 8 client that uses HTML+JS, it's almost the same as the actual
 This code was written for SweNUG which is the Swedish .NET User Group. It's used for a demonstration on how SignalR can be used to create cross-platform games.
 
 ##Demo##
-There's a demo available at http://tictactoe2012.azurewebsites.net/
+There's a demo available at http://signalr-tictactoe.azurewebsites.net/
 
 ##License##
 Just give me some credit if you earn millions based of this very original idea.
