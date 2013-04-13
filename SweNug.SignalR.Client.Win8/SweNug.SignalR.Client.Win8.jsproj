@@ -63,7 +63,7 @@
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />
     <Content Include="js\jquery-1.8.0.min.js" />
-    <Content Include="js\jquery.signalR-1.0.0-alpha2.min.js" />
+    <Content Include="js\jquery.signalR-1.0.1.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="pages\tictactoe\game.css" />
     <Content Include="default.html" />
