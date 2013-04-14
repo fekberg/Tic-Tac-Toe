@@ -5,7 +5,7 @@
     <title>Tic tac toe</title>
 
     <script src="/js/jquery-1.8.0.min.js"></script>
-    <script src="/js/jquery.signalR-1.0.0-alpha2.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.signalR-1.0.1.min.js"></script>
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
@@ -72,7 +72,7 @@
             $("#game").hide();
             $("#findAnotherGame").hide();
 
-            var connection = $.hubConnection('http://tictactoe2012.azurewebsites.net/');
+            var connection = $.hubConnection('http://signalr-tictactoe.azurewebsites.net/');
             connection.start();
             var game = connection.createHubProxy("game");
 
